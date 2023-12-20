@@ -26,7 +26,6 @@ namespace ShitChat.UserControls
     /// </summary>
     public partial class friendsWindow : UserControl
     {
-        //UserManager manager; //= new UserManager();
         User user;
         RegisterWindow register = new RegisterWindow();
         MessageManager friendsManager;
@@ -42,11 +41,6 @@ namespace ShitChat.UserControls
             this.friendsManager = manager;
         }
 
-        //private bool IsUser (string username)
-        //{
-        //    loggedInUser = register.userList.FirstOrDefault(user => user.UserName == username);
-        //    return loggedInUser != null;
-        //}
 
         private bool IsAdmin()
         {
@@ -54,23 +48,25 @@ namespace ShitChat.UserControls
             return friendsManager.currentUser.UserName == "admin";
         }
 
+
         public void ShowFriendsWindow()
         {
             this.Visibility = Visibility.Visible;
             ShowFriendsList();
         }
 
+
         public void HideFriendsWindow()
         {
             this.Visibility = Visibility.Collapsed;
         }
+
 
         private void ShowFriendsList()
         {
             removeFriend_ListBox.Items.Clear();
             if (IsAdmin())
             {
-
                 foreach (User user in register.userList)
                 {
                     if (user.UserName != "admin")
@@ -98,6 +94,7 @@ namespace ShitChat.UserControls
             }
         }
 
+
         private void UpdateRemoveFriendsButtonState()
         {
             RemoveFriends.IsEnabled = true;
@@ -108,17 +105,6 @@ namespace ShitChat.UserControls
             UpdateRemoveFriendsButtonState();
         }
 
-        //private void RemoveFriends_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        //{
-        //    if (IsAdmin())
-        //    {
-        //        HandleAdminRemove();
-        //    }
-        //    else
-        //    {
-        //        HandleUserRemove();
-        //    }
-        //}
 
         private void HandleAdminRemove()
         {

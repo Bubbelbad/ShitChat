@@ -1,41 +1,74 @@
-﻿<UserControl x:Class="ShitChat.UserControls.friendsWindow"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ShitChat.UserControls"
-             mc:Ignorable="d" 
-             Margin="200,10,0,0"
-             Background="#FFF9F9F9"
-             d:DesignHeight="435" d:DesignWidth="700">
+﻿<UserControl
+    x:Class="ShitChat.UserControls.friendsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ShitChat.UserControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Margin="200,10,0,0"
+    d:DesignHeight="435"
+    d:DesignWidth="700"
+    Background="#FF336444"
+    mc:Ignorable="d">
 
-    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,-4,-3,-1" Background="#FF31632D" OpacityMask="Black">
+    <Grid
+        Margin="20,20,20,20"
+        Background="#FF336444"
+        OpacityMask="Black"
+        RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform/>
-                <TranslateTransform/>
+                <ScaleTransform />
+                <SkewTransform />
+                <TranslateTransform />
             </TransformGroup>
         </Grid.RenderTransform>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="200*" />
+            <ColumnDefinition Width="29*" />
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="removeFriend_ListBox" Margin="35,59,131,98" Background="#FFABACAB" RenderTransformOrigin="0.496,0.457" Visibility="Visible" IsEnabled="True" SelectionChanged="removeFriend_ListBox_SelectionChanged">
+        <Border Background="#FF284E35" CornerRadius="5,5,5,5" Margin="10,10,10,10">
+            <Border.Effect>
+                <DropShadowEffect />
+            </Border.Effect>
+        </Border>
+        <ListBox
+            x:Name="removeFriend_ListBox"
+            Margin="35,59,131,98"
+            Background="#FFABACAB"
+            IsEnabled="True"
+            RenderTransformOrigin="0.496,0.457"
+            SelectionChanged="removeFriend_ListBox_SelectionChanged"
+            Visibility="Visible">
             <ListBox.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.373"/>
-                    <TranslateTransform/>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="-0.373" />
+                    <TranslateTransform />
                 </TransformGroup>
             </ListBox.RenderTransform>
         </ListBox>
-        <Button x:Name="RemoveFriends" Content="Remove friend" Margin="37,362,482,48" RenderTransformOrigin="-0.046,-0.391" Visibility="Visible" Width="95" Height="30" IsEnabled="False" Click="RemoveFriends_Click"/>
-        <Label x:Name="textHelper" Content="Here is your friendlist, click on them and then the button to remove them" Margin="-1,4,2,389" FontWeight="Bold" FontSize="20" Foreground="White" Visibility="Visible" Grid.ColumnSpan="2"/>
+        <Button
+            x:Name="RemoveFriends"
+            Width="95"
+            Height="30"
+            Margin="37,362,482,48"
+            Click="RemoveFriends_Click"
+            Content="Remove friend"
+            IsEnabled="False"
+            RenderTransformOrigin="-0.046,-0.391"
+            Visibility="Visible" />
+        <Label
+            x:Name="textHelper"
+            Grid.ColumnSpan="2"
+            Margin="-1,4,2,389"
+            Content="Here is your friendlist, click on them and then the button to remove them"
+            FontSize="20"
+            FontWeight="Bold"
+            Foreground="White"
+            Visibility="Visible" />
 
     </Grid>
-
-
 
 </UserControl>
