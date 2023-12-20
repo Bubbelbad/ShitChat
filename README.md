@@ -1,9 +1,9 @@
 
 # ShitChat
 
-This was an assignment in school for our C# course. It's a WPF application that mimics a social media platform and saves the information locally in json-format. 
-
-
+I have forked this repository from a school assignment that we made in a group for our C# course. 
+It's a WPF application that mimics a social media platform and saves the information locally in json-format. 
+I wanted to further develop some parts to practice it myself, and maybe develop the app a little bit further too. 
 
 
 ## Features
