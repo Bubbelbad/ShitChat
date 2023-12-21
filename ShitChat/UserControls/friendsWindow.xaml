@@ -27,15 +27,27 @@
             <ColumnDefinition Width="200*" />
             <ColumnDefinition Width="29*" />
         </Grid.ColumnDefinitions>
-        <Border Background="#FF284E35" CornerRadius="5,5,5,5" Margin="10,10,10,10">
+        <Border
+            Grid.Column="0"
+            Margin="10,60,100,100"
+            Background="#FF284E35"
+            CornerRadius="5,5,5,5">
             <Border.Effect>
                 <DropShadowEffect />
             </Border.Effect>
         </Border>
+        <Label
+            Margin="15"
+            Content="Friends"
+            FontSize="25"
+            Foreground="White" />
         <ListBox
             x:Name="removeFriend_ListBox"
-            Margin="35,59,131,98"
-            Background="#FFABACAB"
+            Margin="15,65,105,105"
+            Background="#FF284E35"
+            FontSize="16"
+            Foreground="White"
+            BorderBrush="Transparent"
             IsEnabled="True"
             RenderTransformOrigin="0.496,0.457"
             SelectionChanged="removeFriend_ListBox_SelectionChanged"
@@ -54,10 +66,10 @@
             Width="95"
             Height="30"
             Margin="37,362,482,48"
+            Panel.ZIndex="1"
             Click="RemoveFriends_Click"
             Content="Remove friend"
-            IsEnabled="False"
-            RenderTransformOrigin="-0.046,-0.391"
+            IsEnabled="True"
             Visibility="Visible" />
         <Label
             x:Name="textHelper"
