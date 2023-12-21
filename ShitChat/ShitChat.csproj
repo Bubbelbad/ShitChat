@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\splashscreen.png" />
     <None Remove="shit.png" />
     <None Remove="UserControls\account-box.svg" />
     <None Remove="UserControls\account.png" />
@@ -46,6 +47,10 @@
     <Resource Include="UserControls\profile3.png" />
     <Resource Include="UserControls\shitIconS.png" />
     <Resource Include="UserControls\userIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="Images\splashscreen.png" />
   </ItemGroup>
 
 </Project>
