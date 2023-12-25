@@ -20,6 +20,7 @@ namespace ShitChat
             this.Friend = friend;
         }
 
+
         public string GetJson()
         {
             string jsonString = JsonSerializer.Serialize(this);

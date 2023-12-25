@@ -1,4 +1,4 @@
-﻿using System
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,19 +21,19 @@ namespace ShitChat
 
         public void CreateNewMessage(string message, User writer, User reciever)
         {
-            
-
-           
+            writer.conversations.Add(new Conversation(reciever));
+            reciever.conversations.Add(new Conversation(writer));
+            Message newMessage = new Message(message, writer.UserName.ToString(), reciever.UserName.ToString());
         }
 
 
 
         public void ReplyToConversation(string message, User writer, User reciever)
         {
-            Message newMessage = new Message(message, writer, reciever);
+            Message newMessage = new Message(message, writer.UserName.ToString(), reciever.UserName.ToString());
             foreach (Conversation con in writer.conversations)
             {
-                if (con.User == reciever)
+                if (con.Friend.UserName == reciever.UserName.ToString())
                 {
                     con.messages.Add(newMessage);
                 }
