@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Sources;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -74,8 +75,19 @@ namespace ShitChat.UserControls
 
         private void SendMessage(string message)
         {
+            foreach (Conversation con in messageManager.currentUser.conversations)
+            {
+                if (con.Friend == reciever)
+                {
+                    messageManager.ReplyToConversation(message, messageManager.currentUser, reciever);
+                    UpdateChatDisplay(reciever);
+                    MessageTextBox.Text = string.Empty;
+                    return;
+                }
+            }
+
             messageManager.CreateNewMessage(message, messageManager.currentUser, reciever);
-            UpdateChatDisplay(reciever); 
+            UpdateChatDisplay(reciever);
             MessageTextBox.Text = string.Empty;
         }
 
@@ -93,10 +105,12 @@ namespace ShitChat.UserControls
             }
         }
 
+
         public void ShowChatWindow()
         {
             this.Visibility = Visibility.Visible;
         }
+
 
         public void HideChatWindow()
         {
