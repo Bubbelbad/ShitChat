@@ -27,21 +27,10 @@
             </Label.Foreground>
         </Label>
         <Label
-            Margin="240,100,0,0"
+            Margin="110,100,0,0"
             HorizontalAlignment="Left"
-            Content="SchoolProject"
+            Content="School project - social media app"
             FontSize="25">
-            <Label.Foreground>
-                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}" />
-            </Label.Foreground>
-        </Label>
-        <Label
-            Grid.Row="2"
-            Margin="80,0,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Participating Students:"
-            FontSize="20">
             <Label.Foreground>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}" />
             </Label.Foreground>
@@ -50,35 +39,19 @@
             Grid.Row="1"
             Width="500"
             Height="140"
-            Margin="50,0,0,0"
+            Margin="75,0,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Center"
             FontSize="18"
             FontStyle="Italic"
-            Text="We have made an application that mimics a social media in such a way that you can send messages to users. The information is save as Json locally.  The work aims to deepen our understanding of information sent between different windows and user controls, but mainly cooprerate and work in groups."
+            Text="The foundation of this app was developed in a school group assignment for my course in C#. It's a prototype for a social media app that saves the information locally in json-format. 
+            Iv'e forked the code to develop some of the part myself since I want to try my own idéa of structuring the chat-functions. "
             TextWrapping="Wrap">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}" />
             </TextBlock.Foreground>
         </TextBlock>
-        <Label
-            Grid.Row="2"
-            Margin="300,0,0,0"
-            VerticalAlignment="Top"
-            Content="Tim, Victor, Raashid och Johan"
-            FontSize="20">
-            <Label.Foreground>
-                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}" />
-            </Label.Foreground>
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform AngleX="-2.203" />
-                    <RotateTransform />
-                    <TranslateTransform X="-1.462" />
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
+
     </Grid>
 </UserControl>
 
