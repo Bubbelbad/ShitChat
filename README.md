@@ -10,8 +10,9 @@ I wanted to further develop some parts to practice it myself, and maybe develop 
 
 - Create user account
 - Edit your profile information, choose an avatar or take profile picture
-- Chat function where you can send messages to other users
+- Chat function where you can send messages to other users and save as json (this was not working properly, and is to be fixed)
 - Menu with different functions to navigate
+- View to see and edit friendslist (this also needs a final touch)
 
 
 ## Screenshots
